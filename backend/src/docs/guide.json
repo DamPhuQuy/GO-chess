@@ -1,0 +1,302 @@
+{
+  "version": "1.0.0",
+  "title": "Cẩm nang cờ vây",
+  "introduction": "Cờ vây là trò chơi chiến lược dành cho hai người. Mỗi nước đi đặt một quân lên giao điểm để mở rộng ảnh hưởng, giữ nhóm quân sống và kiểm soát phần bàn cờ. Cẩm nang này trình bày luật nền tảng cùng những khái niệm cần để bắt đầu một ván; cuối trang có nguồn để đọc sâu hơn.",
+  "ruleProfile": {
+    "boardSizes": [
+      9,
+      19
+    ],
+    "firstPlayer": "Đen đi trước; ứng dụng hiện cho người chơi cầm Đen và máy cầm Trắng.",
+    "koRule": "Ko đơn giản: không được lập tức tái tạo lại thế bàn ngay trước nước đi của đối thủ.",
+    "scoring": "Tính điểm diện tích: quân còn trên bàn và vùng giao điểm trống được một màu bao quanh.",
+    "whiteKomi": "Ứng dụng cộng 7,5 điểm cho Trắng; mức komi khác nhau giữa các giải và bộ luật.",
+    "endgameLimitation": "Ứng dụng chưa có màn hình đánh dấu nhóm chết để phân xử. Trước khi bỏ lượt kết thúc ván, hãy bắt những nhóm bạn và máy đều đồng ý là đã chết."
+  },
+  "sections": [
+    {
+      "id": "muc-tieu-va-ban-co",
+      "title": "1. Mục tiêu và bàn cờ",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hai người lần lượt đặt quân Đen và Trắng lên các giao điểm của lưới. Quân đã đặt không di chuyển; quân bị bắt mới rời bàn. Người chơi cố tạo vùng ảnh hưởng và đất, đồng thời ngăn nhóm quân của mình bị bắt."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Bàn 19×19 là kích thước chuẩn thường thấy trong cờ vây; mỗi giao điểm là một điểm có thể đi.",
+            "Bàn 9×9 dùng cùng các quy tắc cốt lõi nhưng ván thường ngắn hơn và giao tranh đến sớm hơn.",
+            "Đường kẻ chéo chỉ giúp nhìn thế bàn; hai quân chạm nhau theo đường chéo không tạo thành một nhóm nối liền."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bat-dau-va-luot-di",
+      "title": "2. Bắt đầu và một lượt đi",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            "Đen đi trước, sau đó hai bên thay phiên nhau.",
+            "Đặt một quân vào giao điểm đang trống. Quân nằm yên ở đó cho đến khi bị bắt.",
+            "Nếu không muốn hoặc không thể đi một nước có ích, người chơi có thể bỏ lượt. Hai lượt bỏ liên tiếp kết thúc ván trong ứng dụng này."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Một nước đi có thể vừa đặt quân, vừa nối nhóm, tạo thêm khí, bắt quân đối phương hoặc tranh một vùng đất. Trước khi đi, hãy kiểm tra xem nhóm quân mới có còn khí hay có bắt được quân đối phương để mở khí hay không."
+        }
+      ]
+    },
+    {
+      "id": "nhom-khi-va-atari",
+      "title": "3. Nhóm quân, khí và atari",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Các quân cùng màu nối với nhau theo chiều ngang hoặc dọc tạo thành một nhóm. Những giao điểm trống kề ngang/dọc với một quân hoặc nhóm là khí của nhóm đó. Giao điểm chéo không phải khí."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Một quân ở giữa bàn có tối đa bốn khí nếu xung quanh đều trống; quân trên cạnh và ở góc có ít hướng thoát hơn.",
+            "Khi một nhóm chỉ còn một khí, nhóm đang bị atari. Đối thủ có thể bắt nhóm ở lượt kế tiếp nếu khí cuối bị lấp.",
+            "Khi bị atari, có thể nối thêm quân, chạy ra vùng trống hoặc bắt nhóm đang uy hiếp nếu nước bắt hợp lệ."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Mẹo kiểm tra",
+          "text": "Đếm khí của cả nhóm nối liền, không chỉ của quân vừa đặt. Nước đi đường chéo thường không cứu được một nhóm đang atari."
+        }
+      ]
+    },
+    {
+      "id": "bat-quan",
+      "title": "4. Bắt quân",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Một nhóm bị bắt khi sau nước đi hợp lệ nó không còn khí nào. Tất cả quân trong nhóm được nhấc khỏi bàn cùng lúc; các giao điểm vừa mở có thể trở thành khí hoặc đất."
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tìm nhóm đối phương nối với giao điểm bạn định đặt.",
+            "Tính các khí còn lại sau khi đặt quân và áp dụng mọi nước bắt xảy ra.",
+            "Nếu nhóm đối phương hết khí, gỡ toàn bộ nhóm đó khỏi bàn và tăng số quân bắt được."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Bắt một nhóm có thể tạo ra khí mới cho nhóm của bạn. Vì vậy một điểm trông như tự sát vẫn có thể là nước hợp lệ nếu nó bắt đối phương và nhóm của bạn có khí sau khi bắt."
+        }
+      ]
+    },
+    {
+      "id": "luat-nuoc-di",
+      "title": "5. Nước đi hợp lệ, tự sát và ko",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Không đặt quân ngoài bàn hoặc lên giao điểm đã có quân.",
+            "Không tự sát: không được đặt quân khiến nhóm mình hết khí, trừ trường hợp nước đó bắt quân và mở được khí.",
+            "Không được tái tạo tức thì thế bàn ngay trước nước đi của đối thủ. Quy tắc này ngăn vòng bắt lại vô hạn gọi là ko.",
+            "Nước bỏ lượt và đầu hàng được hỗ trợ trong ứng dụng. Nước đi không hợp lệ bị từ chối và không đổi bàn hay lượt."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Ko có nhiều biến thể",
+          "text": "Ứng dụng hiện cấm lặp lại ngay thế bàn trước đó. Một số bộ luật, trong đó có AGA, dùng super-ko để cấm lặp thế bàn rộng hơn trong lịch sử ván. Nếu chơi giải, hãy theo bộ luật của giải."
+        }
+      ]
+    },
+    {
+      "id": "song-chet-va-seki",
+      "title": "6. Sống, chết, mắt và seki",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mục tiêu không phải giữ mọi quân bằng mọi giá. Một nhóm sống nếu đối thủ không thể bắt nó trong khi tuân thủ luật. Hai mắt thật là cách phổ biến để một nhóm rộng sống chắc: đối thủ không thể lấp cả hai điểm mắt mà không tự sát."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mắt là vùng trống được nhóm mình bao quanh. Mắt giả có thể bị đối thủ chia cắt hoặc bắt; đừng chỉ đếm hình dạng bề ngoài.",
+            "Seki là thế sống chung: hai bên cùng giữ các khí chung và không thể bắt nhau trước mà không làm nhóm mình nguy hiểm.",
+            "Nhóm ít khí có thể bị bao vây dù vẫn còn trên bàn. Hãy đọc xem đối thủ có thể tạo thêm khí hay làm mắt trước khi kết luận nhóm đã sống."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Phân xử cuối ván",
+          "text": "Trong cờ vây tiêu chuẩn, hai bên cần thống nhất nhóm nào đã chết. Ứng dụng chưa có thao tác đánh dấu nhóm chết; hãy chơi tiếp để bắt nhóm đó trước khi cả hai bỏ lượt."
+        }
+      ]
+    },
+    {
+      "id": "ket-thuc-va-tinh-diem",
+      "title": "7. Kết thúc ván và tính điểm",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            "Khi không còn nước có ích, hai người bỏ lượt liên tiếp để kết thúc.",
+            "Thỏa thuận về nhóm chết và loại bỏ chúng theo bộ luật đang chơi; nếu bất đồng, ván cần được chơi tiếp hoặc theo thủ tục của bộ luật đó.",
+            "Đếm điểm theo cách tính của bộ luật. Trong ứng dụng, mỗi quân còn trên bàn và mỗi giao điểm trống chỉ giáp một màu được tính cho màu đó.",
+            "Cộng 7,5 điểm komi cho Trắng trong ứng dụng rồi so tổng điểm. Điểm bằng nhau là hòa."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Các vùng trống giáp cả Đen lẫn Trắng là điểm trung lập và không cộng cho bên nào. Komi bù lợi thế đi trước của Đen; con số cụ thể thay đổi tùy giải và bộ luật."
+        },
+        {
+          "type": "callout",
+          "title": "Tính điểm khác nhau theo luật",
+          "text": "Ứng dụng dùng tính điểm diện tích (quân trên bàn + vùng trống được kiểm soát). Luật Nhật thường đếm đất và quân bắt; AGA dùng một hệ tính diện tích có thủ tục riêng để hai bên có số nước đi bằng nhau. Đừng trộn cách đếm giữa các bộ luật."
+        }
+      ]
+    },
+    {
+      "id": "choi-trong-ung-dung",
+      "title": "8. Chơi một ván trong ứng dụng",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            "Chọn bàn 9×9 để chơi nhanh hoặc 19×19 cho bàn tiêu chuẩn.",
+            "Bạn cầm Đen và đi trước bằng cách nhấn một giao điểm trống. Máy trả lời sau mỗi nước hợp lệ.",
+            "Dùng Bỏ lượt khi chưa muốn đi; hai lượt bỏ liên tiếp kết thúc ván. Dùng Đầu hàng để nhường ván.",
+            "Bảng bên cạnh cho biết lượt đi, số quân bắt và kết quả. Nếu nước đi phạm luật, thông báo lỗi xuất hiện và bàn cờ giữ nguyên."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Giới hạn đối thủ máy",
+          "text": "Máy dùng heuristic cơ bản để chọn nước hợp lệ và ưu tiên bắt quân hoặc tạo vị trí an toàn. Máy phù hợp để thử luồng chơi, không thay thế engine cờ vây chuyên nghiệp hay đối thủ có cấp độ xếp hạng."
+        }
+      ]
+    },
+    {
+      "id": "chien-luoc-khai-cuoc",
+      "title": "9. Khai cuộc: góc, biên, trung tâm",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ở khai cuộc, mục tiêu là tạo vùng ảnh hưởng hiệu quả. Góc có hai cạnh bàn làm ranh giới sẵn, biên có một cạnh, còn trung tâm cần nhiều quân hơn để khép đất."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Thường bắt đầu ở góc, sau đó mở rộng dọc biên và tranh trung tâm.",
+            "Nước cách biên vài đường thường cân bằng giữa tạo đất và giữ không gian phát triển; sát biên quá dễ bị bó hẹp, quá xa khó khép đất.",
+            "Các điểm cách nhau vừa đủ giúp một quân che chở vùng rộng. Nếu đối thủ xâm nhập, củng cố chỗ yếu trước khi mở rộng thêm.",
+            "Không cần nối mọi quân. Mối nối xa có thể vẫn vững, nhưng phải đọc khả năng đối thủ cắt và bắt từng nhóm."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trung-cuoc-va-giao-tranh",
+      "title": "10. Trung cuộc và giao tranh",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Bảo vệ nhóm yếu trước: đếm khí, tìm đường chạy, đường nối và khả năng tạo mắt.",
+            "Cắt khi có thể cô lập nhóm đối thủ; nối khi việc bị cắt sẽ khiến nhóm mình chết hoặc mất nhiều điểm.",
+            "Xâm nhập vùng đối thủ khi còn chỗ sống hoặc nối ra ngoài. Nếu không thể sống trọn, đôi khi mục tiêu là giảm đất hoặc tạo ảnh hưởng cho nhóm khác.",
+            "Không cần bắt mọi quân. Một nhóm đối phương nhỏ, yếu nhưng có thể sống đôi khi không đáng để đổi lấy việc nhóm lớn của mình bị bắt.",
+            "Đổi quân lấy đất, khí hoặc quyền đi trước là một phần bình thường của ván cờ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chien-thuat-co-ban",
+      "title": "11. Chiến thuật cơ bản",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Atari: đặt nhóm đối thủ còn đúng một khí vào nguy hiểm; chỉ atari khi nước đó tạo lợi thế, vì đối thủ có thể chạy hoặc nối.",
+            "Nối và cắt: nối các nhóm của mình để tăng khí; cắt các liên kết của đối thủ để buộc họ bảo vệ nhiều nhóm.",
+            "Ladder: chuỗi đuổi bắt theo đường chéo. Trước khi bắt đầu, kiểm tra xem đường chạy có chạm quân hỗ trợ hay không.",
+            "Net: chặn nhiều hướng chạy để nhóm đối thủ khó thoát hơn so với đuổi thẳng.",
+            "Ko: nếu bị cấm bắt lại ngay, hãy đi một nước đe dọa đủ lớn ở nơi khác rồi quay lại tranh ko khi luật cho phép.",
+            "Sente và gote: sente là nước buộc đối thủ phải đáp lời; gote là nước sau đó nhường quyền đi. So sánh giá trị nước đi thay vì chỉ phản ứng gần nhất."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cuoc-tan-va-sai-lam",
+      "title": "12. Tàn cuộc và lỗi thường gặp",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Khi các nhóm đã tương đối sống, hoàn thiện ranh giới và chiếm những điểm trung lập có giá trị. Ở tàn cuộc, vài giao điểm có thể quyết định kết quả; hãy so sánh điểm lớn trước rồi mới tối ưu nước nhỏ."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Đừng đặt quân chỉ để lấp khí của nhóm mình nếu không có lợi ích rõ ràng.",
+            "Đừng cho rằng hai quân chéo nhau đã nối an toàn.",
+            "Đừng bỏ qua nhóm còn một khí hoặc tự cắt đường chạy của quân mình.",
+            "Đừng nối mọi quân theo thói quen; hãy cân bằng an toàn với hiệu quả.",
+            "Đừng bỏ lượt trước khi bắt nhóm chết và thống nhất vùng đất; ứng dụng chưa hỗ trợ đánh dấu nhóm chết ở màn hình kết quả."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tu-dien",
+      "title": "13. Từ điển nhanh",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Khí: giao điểm trống kề ngang/dọc với một quân hoặc nhóm.",
+            "Atari: trạng thái nhóm chỉ còn một khí.",
+            "Mắt: điểm trống nằm trong nhóm; hai mắt thật thường giúp nhóm sống chắc.",
+            "Ko: thế bắt lại có thể lặp; luật cấm một số kiểu lặp để ván không quay vòng vô hạn.",
+            "Seki: thế sống chung khi hai bên cùng giữ khí chung và không bên nào thể bắt an toàn.",
+            "Komi: điểm bù cho Trắng vì Đen được đi trước.",
+            "Đất: vùng giao điểm trống được một màu kiểm soát theo cách tính điểm đang dùng."
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "nihonkiin-basics",
+      "title": "Nihon Ki-in — How to Play Go: board, territory, groups, and liberties",
+      "description": "Bài học nhập môn về giao điểm, đặt quân, đất, nhóm nối, bắt quân, atari và khí.",
+      "url": "https://www.nihonkiin.or.jp/english/howto/howto1.htm"
+    },
+    {
+      "id": "nihonkiin-ko-life-death",
+      "title": "Nihon Ki-in — How to Play Go: forbidden moves, eyes, and ko",
+      "description": "Giải thích điểm cấm, ngoại lệ khi bắt quân, mắt, nhóm sống/chết và ko đơn giản.",
+      "url": "https://www.nihonkiin.or.jp/english/howto/howto2.htm"
+    },
+    {
+      "id": "nihonkiin-gameflow",
+      "title": "Nihon Ki-in — How to Play Go: opening through endgame",
+      "description": "Ví dụ khai cuộc, trung cuộc, tàn cuộc, xác định nhóm chết và đếm đất.",
+      "url": "https://www.nihonkiin.or.jp/english/howto/howto3.htm"
+    },
+    {
+      "id": "aga-rules",
+      "title": "American Go Association — AGA Rules Win",
+      "description": "Tổng quan về super-ko, tính điểm diện tích và xử lý bất đồng về nhóm chết theo AGA.",
+      "url": "https://usgo.org/content.aspx?club_id=454497\u0026item_id=105706\u0026page_id=5"
+    }
+  ]
+}

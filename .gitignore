@@ -1,0 +1,22 @@
+.agents/
+process/
+.taste-skill/
+AGENTS.md
+
+# Environment and Secret configs
+.env
+.env.*
+!.env.example
+*.env
+
+# SQLite and local data storage
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+data/
+backend/data/
+
+# Logs and runtime artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
